@@ -196,7 +196,7 @@ resource "null_resource" "deploy_nixos" {
       var.target_port,
       local.build_on_target,
       local.ssh_private_key == "" ? "-" : local.ssh_private_key,
-      "switch",
+      "boot",
       var.delete_older_than,
       ],
       local.extra_build_args
